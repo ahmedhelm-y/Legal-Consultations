@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+
+  @include sm {
+    font-size: 58%;
+  }
+
+  @include xs {
+    font-size: 50%;
+  }
+
+  @include xxs {
+    font-size: 45%;
+  }
+}
+
+body {
+  font-family: "Tajawal";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+
+.overflow-body {
+  overflow: hidden;
+}
+
+p {
+  color: $paragraphMainColor;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $headingMainColor;
+  margin: 0;
+}
+
+ul {
+  margin-bottom: 0;
+  list-style: none;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}

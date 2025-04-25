@@ -1,0 +1,148 @@
+.link__ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  gap: 10px;
+  transition: 0.5s;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.center {
+    margin: 0 auto;
+  }
+
+  &.full_width__ {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  &.full_width_sm__ {
+    @include sm {
+      min-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &.full_width_xs__ {
+    @include xs {
+      min-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &.fixed_size__ {
+    min-width: 140px;
+  }
+
+  &.main_link {
+    height: 46px;
+    color: #fff;
+    padding: 0 30px;
+    font-size: 1.4rem;
+    background: $primaryColor;
+    border-radius: $mainBorderRadius;
+
+    &:hover {
+      background-color: rgba($primaryColor, 0.9);
+    }
+  }
+
+  &.second_color_link__ {
+    height: 46px;
+    border-radius: $mainBorderRadius;
+    padding: 0 30px;
+    background-color: $secondaryColor;
+    color: #fff;
+
+    &:hover {
+      background-color: rgba($secondaryColor, 0.9);
+    }
+
+    &.bordered__ {
+      background-color: transparent;
+      color: $secondaryColor;
+      border: 1px solid $secondaryColor;
+
+      &:hover {
+        background-color: rgba($secondaryColor, 0.1);
+      }
+    }
+  }
+
+  &.footer_link__ {
+    background-color: rgba($secondaryColor, 0.07);
+    border-radius: $mainBorderRadius;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 5px 25px;
+    height: 36px;
+    color: $secondaryColor;
+
+    .icon__ {
+      margin: 0;
+    }
+
+    .text__ {
+      direction: ltr;
+    }
+
+    &:hover {
+      background-color: $secondaryColor;
+      color: #fff;
+
+      .icon__ {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+
+  &.social-icon {
+    background-color: #fff;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+  }
+
+  &.contact-box {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    height: 69px;
+    margin-bottom: 30px;
+    gap: 30px;
+    background-color: $bgCard;
+    border-radius: $mainBorderRadius;
+
+    .contact-figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 0;
+      z-index: 1;
+      width: 49px;
+      height: 49px;
+      background-color: rgb($thirdColor, 0.15);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .img-om {
+      max-width: 24px;
+      max-height: 24px;
+    }
+
+    .parg {
+      font-size: 1.6rem;
+      color: $paragraphMainColor;
+      font-weight: 500;
+    }
+  }
+}

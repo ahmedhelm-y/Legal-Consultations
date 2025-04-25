@@ -1,0 +1,33 @@
+// Header Animation
+@keyframes active-menu {
+  0% {
+    // transform: translateY(-100%);
+    top: -200px;
+  }
+
+  100% {
+    // transform: translateY(0);
+    top: 0;
+  }
+}
+
+@keyframes not-active-menu {
+  0% {
+    // transform: translateY(0);
+    top: 0;
+  }
+
+  100% {
+    // transform: translateY(-100%);
+    top: -200px;
+  }
+}
+/////////////////////////////////////
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

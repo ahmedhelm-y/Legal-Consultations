@@ -1,0 +1,25 @@
+.shape-section {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 95px;
+    height: 118px;
+    top: 65%;
+    left: 0;
+    background-color: rgb($secondaryColor, 0.16);
+    border-radius: 0 $mainBorderRadius $mainBorderRadius 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 73px;
+    height: 118px;
+    top: 10%;
+    right: 0;
+    background-color: rgb($secondaryColor, 0.16);
+    border-radius: $mainBorderRadius 0 0 $mainBorderRadius;
+  }
+}

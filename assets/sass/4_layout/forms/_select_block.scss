@@ -1,0 +1,81 @@
+.select__ {
+  width: 100% !important;
+  margin-bottom: 0;
+
+  // button
+  .dropdown-toggle {
+    height: 46x;
+    border: solid 1px $borderColor;
+    border-radius: $mainBorderRadius;
+    background-color: transparent;
+    padding: 10px 30px;
+    font-size: 1.4rem;
+    font-stretch: normal;
+    color: $headingMainColor;
+    outline: none !important;
+    position: relative;
+    
+    &::after {
+      content: url(../images/shapes/arrow_down.svg);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      inset-inline-end: 10%;
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+    
+    .filter-option-inner-inner {
+      font-size: 1.4rem;
+      color: $headingMainColor;
+    }
+
+    .filter-option {
+      margin-inline-end: 15px;
+      text-align: right;
+
+      @include dir {
+        text-align: left;
+      }
+    }
+
+    &:focus,
+    &:active {
+      background-color: #fff !important;
+      border-color: $primaryColor !important;
+      color: $headingMainColor !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  &.show {
+    > .btn-light.dropdown-toggle {
+      background-color: #fff !important;
+      border-color: $primaryColor !important;
+      color: $headingMainColor !important;
+      outline: none !important;
+    }
+  }
+
+  // list items
+  .dropdown-menu {
+    li {
+      .dropdown-item {
+        outline: none !important;
+        font-size: 14px;
+        color: $headingMainColor;
+        border-radius: 0;
+
+        &.active,
+        &:active,
+        &:hover {
+          outline: none !important;
+          background-color: $primaryColor;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

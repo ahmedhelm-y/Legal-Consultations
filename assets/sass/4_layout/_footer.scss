@@ -1,0 +1,273 @@
+// Start Section Contact Footer
+.footer-contact-wrapper {
+  background-color: $thirdColor;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px 10px 0 0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+
+  @include xs {
+    width: 95%;
+  }
+
+  @include xxs {
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: unset;
+    width: 100%;
+  }
+
+  align-items: center;
+  .contact-block {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+    .contact-desc {
+      .title {
+        font-size: 1.8rem;
+        color: #fff;
+        font-weight: 300;
+      }
+      .subtitle {
+        font-size: 1.8rem;
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .figure-block {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 57px;
+      height: 57px;
+      border-radius: 10px;
+      background-color: rgb(#fff, 0.19);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:hover {
+      .img-om {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+// End Section Contact Footer
+
+.footer_sec__ {
+  position: relative;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-color: $primaryColor;
+  padding-top: 50px;
+  overflow: hidden;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    content: url("../images/footer/before.png");
+    top: -18%;
+    left: 0;
+    z-index: -1;
+    @include xs {
+      top: 18%;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: url("../images/footer/after.png");
+    top: -5%;
+    right: 0;
+    z-index: -1;
+  }
+}
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  @include xs {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 35px;
+  }
+}
+.footer-log-desc {
+  max-width: 482px;
+  @include md {
+    max-width: 350px;
+  }
+}
+.footer_logo__ {
+  margin-bottom: 15px;
+}
+.footer_parg {
+  margin-top: 40px;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #d9d9d9;
+}
+.footer_head__ {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 30px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 2px;
+    background-color: #c69a64;
+    right: 0;
+    bottom: -10px;
+  }
+}
+
+.footer_list__ {
+  margin-bottom: 10px;
+  color: #fff;
+
+  @include xs {
+    gap: 10px;
+  }
+
+  a {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    gap: 15px;
+
+    @include xxs {
+      font-size: 9px;
+    }
+
+    @include dir {
+      font-size: 12px;
+
+      @include xxs {
+        font-size: 7px;
+      }
+    }
+
+    img {
+      max-width: 15px;
+      max-height: 15px;
+    }
+
+    &::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 0 100% 0 100%;
+      background-color: rgb($secondaryColor, 0.16);
+      transition: 0.5s;
+      transform: rotate(-96.6deg);
+    }
+
+    &:hover {
+      opacity: 0.8;
+      color: $secondaryColor;
+
+      &::before {
+        background-color: $secondaryColor;
+      }
+    }
+  }
+}
+
+.footer_contacts {
+  li {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+.footer-socials {
+  margin-bottom: 20px;
+}
+.footer_socials__ {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 10px;
+
+  .li__ {
+    &:not(:last-child) {
+      margin-inline-end: 15px;
+    }
+
+    @include xxs {
+      &:not(:last-child) {
+        margin-inline-end: 5px;
+      }
+    }
+  }
+
+  .link__ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+    background-color: rgb($secondaryColor, 0.15);
+
+    border-radius: 3px;
+    padding: 8px;
+
+    img {
+      filter: none;
+    }
+
+    &:hover {
+      background-color: $secondaryColor;
+
+      img {
+        filter: brightness(0) invert(1) !important;
+      }
+    }
+  }
+}
+
+.copyrights_content___ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px 0;
+  color: #fff;
+  margin: 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  background-color: rgb($secondaryColor, 0.16);
+  border: 0;
+
+  @include sm {
+    padding: 20px 0;
+    justify-content: center;
+  }
+
+  @include xxs {
+    font-size: 8px;
+  }
+
+  .copyright_icon__ {
+    margin-inline-end: 10px;
+  }
+
+  .copyright_logo__ {
+    margin-inline-start: 10px;
+  }
+}

@@ -1,0 +1,92 @@
+.nav-tabs {
+  padding: 0;
+  border: none;
+  margin-bottom: 30px !important;
+
+  // .nav-item {
+  //   border: none;
+  //   height: 40px;
+  //   min-width: 85px;
+  //   padding: 0 10px;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   text-decoration: none;
+  //   border-radius: $mainBorderRadius;
+  //   color: $headingMainColor;
+
+  //   &.active {
+  //     background-color: $secondaryColor;
+  //     color: #fff;
+  //   }
+  // }
+}
+
+.nav-pills {
+  padding: 0;
+  border: none;
+  margin-bottom: 50px;
+
+  @include sm {
+    margin-top: 30px;
+  }
+
+  @include xs {
+    margin-top: 20px;
+  }
+
+  &.with_margin_top__ {
+    margin-top: 70px;
+
+    @include sm {
+      margin-top: 50px;
+    }
+
+    @include xs {
+      margin-top: 20px;
+    }
+  }
+
+  .nav-link {
+    border: none;
+    height: 48px;
+    min-width: 240px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $secondGreyColor;
+    border-radius: 0;
+    background-color: transparent;
+    border-bottom: 1px solid $secondGreyColor;
+    font-size: 1.8rem;
+    font-weight: 300;
+    max-width: 211px;
+    cursor: pointer;
+
+    @include md {
+      min-width: 100%;
+    }
+
+    .icon__ {
+      margin-inline-end: 13px;
+      width: 20px;
+      height: 20px;
+    }
+
+    &.active {
+      color: $primaryColor;
+      background-color: transparent;
+      border-color: $primaryColor;
+
+      .icon__ {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,203 @@
+.menu_button__ {
+  display: none;
+
+  @include sm {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(#fff, 0.7);
+    position: relative;
+    width: 40px;
+    height: 40px;
+    color: $primaryColor;
+    border-radius: 50%;
+
+    svg {
+      width: 20px;
+    }
+  }
+}
+
+// .header_lang_wrapper {
+//   margin-inline-start: auto;
+
+//   @include sm {
+//     display: none;
+//   }
+// }
+
+// .lang_link__ {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 10px;
+//   font-size: 1.6rem;
+//   padding: 10px 0;
+//   transition: 0.5s;
+//   z-index: 10;
+//   color: #000 ;
+
+//   .figure__ {
+//     width: 20px;
+//     height: 20px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     overflow: hidden;
+//   }
+
+//   &::after {
+//     content: url(../images/shapes/arrow_down.svg);
+//     margin-inline-start: 5px;
+//   }
+
+//   @include sm {
+//     color: #fff;
+//     filter: brightness(0) invert(1);
+//   }
+// }
+
+// .notification_link__ {
+//   background-color: rgba($secondaryColor, 0.1);
+//   position: relative;
+
+//   .figure__ {
+//     filter: invert(0.61) sepia(0.17) saturate(68.72) hue-rotate(3deg)
+//       brightness(0.96) contrast(0.98);
+//   }
+
+//   &:hover {
+//     background-color: rgba($secondaryColor, 1);
+
+//     .figure__ {
+//       filter: brightness(0) invert(1);
+//     }
+//   }
+
+//   &.has_notification {
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       background-color: $mainRedColor;
+//       top: 0;
+//       inset-inline-start: 0;
+//       border: 3px solid #fff;
+//       border-radius: 50%;
+//       width: 18px;
+//       height: 18px;
+
+//       @include xxs {
+//         border-width: 1px;
+//         width: 8px;
+//         height: 8px;
+//         top: 2px;
+//         inset-inline-start: 2px;
+//       }
+//     }
+//   }
+// }
+
+// // large sizes
+
+// .toolbar_options__ {
+//   display: flex;
+//   align-items: center;
+//   padding: 0;
+//   // position: relative;
+//   z-index: 1;
+//   // margin-top: 10px;
+//   flex-wrap: nowrap;
+
+//   .block__ {
+//     transition: 0.5s;
+
+//     &.lang_list_item__ {
+//       @include sm {
+//         position: absolute;
+//         top: 15px;
+//         inset-inline-start: 15px;
+//       }
+//     }
+
+//     &.header_contacts__ {
+//       display: flex;
+//       align-items: center;
+//       gap: 20px;
+//     }
+
+//     &.small_size_only__ {
+//       display: none;
+
+//       @include sm {
+//         display: flex;
+//       }
+//     }
+//   }
+// }
+
+// // small size
+// @include sm {
+//   .toolbar_options__ {
+//     // margin-top: 20px;
+//     width: 100%;
+//     min-width: 100%;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     row-gap: 15px;
+
+//     .block__ {
+//       &.lang__ {
+//         position: absolute;
+//         top: 20px;
+//         inset-inline-start: 20px;
+
+//         .lang_link__ {
+//           font-size: 1.2rem;
+//           width: fit-content;
+
+//           &::after {
+//             display: none;
+//           }
+//         }
+//       }
+
+//       &.info_link_item__ {
+//         width: 100%;
+
+//         &:hover {
+//           .info_link_block__ {
+//             &::after {
+//               filter: unset !important;
+//               background-color: transparent;
+//               content: url(../images/shapes/header_info_dropdown_more_icon_white.svg);
+//               border-end-end-radius: 0;
+//             }
+//           }
+//         }
+
+//         .user_name__ {
+//           color: #fff;
+//         }
+//       }
+
+//       &.dropdown__ {
+//         order: 5;
+//       }
+
+//       &.sing_up_blocks_list_item__ {
+//         width: 100%;
+//         order: 1;
+//       }
+
+//       &.lang_list_item__ {
+//         order: 3;
+//       }
+
+//       &.search_mode {
+//         display: unset;
+//       }
+//     }
+//   }
+// }

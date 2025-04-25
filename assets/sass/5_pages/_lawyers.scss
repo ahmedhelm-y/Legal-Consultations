@@ -1,0 +1,73 @@
+.lawyer-card {
+  display: flex;
+  align-items: center;
+
+  @include xxs {
+    flex-direction: column;
+  }
+
+  .image-wrapper {
+    min-width: 151px;
+    border-radius: $mainBorderRadius;
+    overflow: hidden;
+    margin-inline-end: 10px;
+
+    @include xxs {
+      margin-bottom: 10px;
+    }
+  }
+
+  .figure-lawyer {
+    margin: 0;
+    padding-bottom: 69.536%;
+    width: 100%;
+  }
+
+  .card-desc {
+    @include xxs {
+      text-align: center;
+    }
+  }
+}
+
+.practice-fields {
+  .box-field {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    column-gap: 10px;
+    row-gap: 20px;
+    padding-inline-start: 20px;
+    margin-bottom: 20px;
+
+    .subtitle {
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: rgb($thirdColor, 0.22);
+        border: 1px solid $thirdColor;
+        border-radius: 1px;
+        box-shadow: -1px -1px 1px rgb($thirdColor, 0.22);
+        transform: rotate(45deg);
+        margin-inline-end: 10px;
+      }
+    }
+  }
+}
+
+.lawyer-socials {
+  display: flex;
+  column-gap: 130px;
+
+  @include sm {
+    justify-content: center;
+    column-gap: 50px;
+  }
+
+  @include xs {
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+  }
+}

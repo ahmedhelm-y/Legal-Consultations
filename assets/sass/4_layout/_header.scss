@@ -1,0 +1,116 @@
+@import "header/dropdown";
+@import "header/login_buttons";
+@import "header/1_logo";
+@import "header/2_navbar";
+@import "header/toolbar_options";
+
+.main_header__ {
+  height: fit-content !important;
+}
+
+.fixed_header__ {
+  position: relative;
+  z-index: 111;
+  background-color: #23244a;
+  padding: 30px 0 25px 0;
+
+  @include sm {
+    padding: 10px 0;
+  }
+
+  &.active_menu__,
+  &.not_active_menu__ {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 111;
+    transition: 0s;
+  }
+
+  &.active_menu__ {
+    animation: active-menu 0.5s;
+    box-shadow: 0 0 10px rgba(#000, 0.1);
+    padding: 10px 0;
+  }
+
+  &.not_active_menu__ {
+    animation: not-active-menu 0.5s;
+    // transform: translateY(-100%);
+    top: -200px;
+  }
+}
+
+.header_content__ {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top_header {
+  padding: 30px 0 0;
+
+  @include xs {
+    padding: 10px 0 0;
+  }
+
+  @include sm {
+    justify-content: space-between;
+  }
+
+  .header_contacts__ {
+    position: relative;
+    height: 53px;
+    padding-inline-end: 45px;
+    flex-shrink: 0;
+
+    @include xs {
+      padding-inline-end: 10px;
+    }
+
+    @include xxs {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: rgba($secondaryColor, 0.1);
+      border-radius: $secondaryBorderRadius;
+      height: 100%;
+      width: 500%;
+      inset-inline-end: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+
+  .header_social__ {
+    margin-inline-start: 22px;
+
+    @include sm {
+      margin: 0;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .title__ {
+      color: $paragraphSecondaryColor;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+
+    .header_social_list__ {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(30px, 40px));
+      margin-inline-start: 12px;
+      gap: 8px;
+
+      @include xxs {
+        gap: 3px;
+      }
+    }
+  }
+}

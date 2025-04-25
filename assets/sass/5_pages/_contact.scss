@@ -1,0 +1,21 @@
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @include sm {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+
+  .iframe {
+    width: 524px;
+    height: 353px;
+    border-radius: $mainBorderRadius;
+
+    @include sm {
+      width: 100%;
+    }
+  }
+}

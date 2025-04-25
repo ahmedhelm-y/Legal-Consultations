@@ -1,0 +1,124 @@
+.section_main_title__ {
+  font-size: 2.2rem;
+  font-weight: 800;
+  width: fit-content;
+  color: $primaryColor;
+  margin-bottom: 15px;
+
+  @include xs {
+    font-size: 2rem;
+  }
+
+  &.none_margin {
+    margin-bottom: 0;
+  }
+
+  &.small_margin_bottom__ {
+    margin-bottom: 15px;
+  }
+}
+
+.section_sub_title__ {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $thirdColor;
+  margin: 0;
+
+  @include xs {
+    font-size: 1.8rem;
+  }
+}
+
+.section_head_wrapper {
+  margin-bottom: 40px;
+
+  @include sm {
+    margin-bottom: 25px;
+  }
+
+  @include xs {
+    margin-bottom: 15px;
+  }
+
+  &.center {
+    .section_main_title__,
+    .section_sub_title__ {
+      text-align: center;
+      margin-inline-end: auto;
+      margin-inline-start: auto;
+    }
+  }
+
+  &.flex_display {
+    display: flex;
+    align-items: center;
+
+    &.justify_content_between {
+      justify-content: space-between;
+    }
+  }
+
+  &.white_color__ {
+    .section_main_title__,
+    .section_sub_title__ {
+      color: #fff;
+
+      &::after,
+      &::before {
+        background-color: #fff;
+      }
+    }
+  }
+
+  &.small_size_dir_column {
+    @include sm {
+      gap: 20px;
+      flex-direction: column;
+    }
+  }
+
+  &.small_size_center__ {
+    @include sm {
+      .page_main_title__,
+      .page_sub_title__ {
+        text-align: center;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+      }
+    }
+  }
+
+  &.none_margin__ {
+    margin: 0 !important;
+  }
+}
+
+.title_icon_wrapper__ {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section_head_wrapper {
+  &.popular_head {
+    .section_main_title__ {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: -5px;
+        left: 50%;
+        width: 80px;
+        height: 2px;
+        background-color: #c69a64;
+        transform: translateX(-50%);
+        background-color: $secondaryColor;
+      }
+    }
+    .section_sub_title__ {
+      font-size: 1.8rem;
+      color: #4f4f4f;
+      font-weight: 500;
+    }
+  }
+}

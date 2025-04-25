@@ -1,0 +1,25 @@
+.header_logo__ {
+  max-width: 60px;
+  display: block;
+  z-index: 1;
+  flex-basis: content;
+  margin-inline-end: 120px;
+  flex-shrink: 0;
+
+  // @include sm {
+  //   max-width: 240px;
+  // }
+
+  @include xs {
+    max-width: 45px;
+  }
+
+  .figure__ {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}

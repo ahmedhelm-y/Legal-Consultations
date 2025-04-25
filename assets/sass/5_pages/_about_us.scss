@@ -1,0 +1,42 @@
+.about-us-wrapper {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+
+  @include sm {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .about-us-info {
+    .parg {
+      font-size: 1.6rem;
+      color: $paragraphMainColor;
+      font-weight: 400;
+      margin-bottom: 15px;
+
+      &.main {
+        color: $primaryColor;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .about-link {
+    border: 1px solid $thirdColor;
+    width: fit-content;
+    margin: 0 auto;
+    color: $thirdColor;
+    padding: 10px 50px;
+    border-radius: $mainBorderRadius;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 25px;
+
+    &:hover {
+      background-color: $thirdColor;
+      color: #fff;
+    }
+  }
+}

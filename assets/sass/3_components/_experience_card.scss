@@ -1,0 +1,53 @@
+.experience-card {
+  padding: 0 10px 50px;
+  text-align: center;
+  transition: 0.4s;
+  background-color: $bgCard;
+  border-radius: $mainBorderRadius;
+
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  .figure__ {
+    padding: 26px 12px 0;
+    background-color: $thirdColor;
+    position: relative;
+    max-width: 70px;
+    z-index: 2;
+    margin-bottom: 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $thirdColor;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -35px;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      z-index: -1;
+
+    }
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $primaryColor;
+    margin-bottom: 10px;
+
+    .num {
+      color: $thirdColor;
+      font-size: 2.5rem;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+    color: $paragraphMainColor;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,29 @@
+.section_block {
+  background-color: $bgCard;
+  border-radius: $mainBorderRadius;
+  padding: 15px;
+
+  .title {
+    color: $primaryColor;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .parg {
+    color: $paragraphMainColor;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  .subtitle {
+    color: $paragraphMainColor;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  &.with_margin_bottom {
+    margin-bottom: 20px;
+  }
+}

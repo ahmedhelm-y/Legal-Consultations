@@ -1,0 +1,12 @@
+/*loading*/
+
+/*lazyload*/
+.loading-omd {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    opacity: 0 !important;
+    filter: blur(40px);
+  }
+}

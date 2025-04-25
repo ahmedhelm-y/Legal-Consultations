@@ -1,0 +1,146 @@
+.button__ {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  justify-content: center;
+  text-decoration: none;
+  gap: 10px;
+  transition: 0.5s;
+
+  .icon__ {
+    flex-shrink: 0;
+    transition: 0.5s;
+  }
+
+  &.center {
+    margin: 0 auto;
+  }
+  
+  &.default_cursor {
+    cursor: default !important;
+  }
+
+  &.margin_start_auto__ {
+    margin-inline-start: auto;
+  }
+
+  &.full_width__ {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  &.full_width_sm__ {
+    @include sm {
+      min-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &.filter_white_icon__ {
+    .icon__ {
+      filter: brightness(0) invert(1);
+    }
+
+    &:hover {
+      .icon__ {
+        filter: unset;
+      }
+    }
+  }
+
+  &.green_bg_button {
+    background-color: $greenColor !important;
+    border: 1px solid $greenColor !important;
+    color: #fff;
+    
+    &:hover {
+      background-color: transparent !important;
+      color: $greenColor !important;
+    }
+  }
+
+  &.red_bg_button {
+    background-color: $mainRedColor !important;
+    border: 1px solid $mainRedColor !important;
+    color: #fff;
+    
+    &:hover {
+      background-color: transparent !important;
+      color: $mainRedColor !important;
+    }
+  }
+
+  &.full_width_xs__ {
+    @include xs {
+      min-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &.half_width__ {
+    width: 50%;
+  }
+
+  &.fixed_size__ {
+    min-width: 168px;
+    max-width: 168px;
+  }
+  
+  &.second_fixed_width {
+    min-width: 188px;
+    max-width: 188px;
+
+  }
+
+  &.margin_top__ {
+    margin-top: 40px;
+
+    @include xs {
+      margin-top: 10px;
+    }
+  }
+
+  &.small_margin_top__ {
+    margin-top: 20px;
+
+    @include xs {
+      margin-top: 10px;
+    }
+  }
+
+  &.scale_icon_on_hover {
+    &:hover {
+      .icon__ {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.submit-button__,
+  input[type="submit"] {
+    height: 46px;
+    color: #fff;
+    padding: 0 20px;
+    font-size: 1.4rem;
+    background-color: $primaryColor;
+    border-radius: $mainBorderRadius;
+
+    &:hover {
+      background-color: rgba($primaryColor, 0.9);
+    }
+  }
+
+}

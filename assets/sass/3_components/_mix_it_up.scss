@@ -1,0 +1,128 @@
+.mixitup_controls_wrapper__ {
+  padding: 0;
+  border: none;
+  margin: 0;
+  gap: 15px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  flex-wrap: nowrap;
+  width: 100%;
+
+  &.fit_content_width {
+    width: fit-content;
+  }
+
+  @include sm {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  @include xs {
+    margin-bottom: 15px;
+
+  }
+
+  &.center__ {
+    justify-content: center !important;
+    min-width: 100% !important;
+  }
+
+  &.with_margin {
+    margin-bottom: 80px;
+  }
+
+  &.row_flex_dir_small_screen__ {
+    @include sm {
+      flex-direction: row !important;
+    }
+  }
+
+  &.small_size_none_margin__ {
+    @include sm {
+      margin: 0;
+    }
+  }
+
+  &.display_block__ {
+    display: block;
+    width: 100% !important;
+  }
+
+  &.display_grid_sm_screen {
+    @include sm {
+      display: grid;
+      grid-template-columns: repeat(2 , 1fr);
+    }
+  }
+
+  .filter {
+    border: none;
+    height: 63px;
+    width: 100%;
+    min-width: fit-content;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    color: $headingThirdColor;
+    background-color: transparent;
+    border: 1px solid $headingThirdColor;
+    cursor: pointer;
+    border-radius: $mainBorderRadius;
+    padding: 10px 40px;
+    transition: 0.5s;
+
+    @include sm {
+      width: fit-content;
+      width: 100%;
+    }
+
+    &.full_width__ {
+      min-width: 100%;
+    }
+
+    &.fixed_width__ {
+      width: 168px;
+    }
+
+    &:hover {
+      background-color: rgba($secondaryColor , 0.1);
+      border-color: rgba($secondaryColor , 1);
+    }
+
+    &.mixitup-control-active {
+      border-color: $secondaryColor;
+      background-color: $secondaryColor;
+      color: #fff;
+
+      img {
+        filter: brightness(0) invert(1);
+      }
+
+      &:hover {
+        background-color: rgba($secondaryColor , 0.9);
+      }
+    }
+  }
+}
+
+.mixitup_box_list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 500px;
+
+  .mix {
+    width: 100%;
+  }
+
+  &.column_dir {
+    flex-direction: column;
+  }
+}

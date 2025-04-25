@@ -1,0 +1,31 @@
+.service-card {
+  position: relative;
+  padding: 30px 10px 50px 10px;
+  text-align: center;
+  background-color: $bgCard;
+  border-radius: $mainBorderRadius;
+  transition: 0.5s;
+  
+  &:hover {
+    transform: translateY(-10px);
+  }
+  
+  .figure__ {
+    max-width: 46px;
+    max-height: 51px;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $primaryColor;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1.6rem;
+    color: $paragraphMainColor;
+    font-weight: 300;
+  }
+} 
